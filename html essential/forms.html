@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms Demo</title>
+</head>
+
+<body>
+    <h1>Forms Demo</h1>
+    <form action="/wow">
+        <p>
+            <label for="username">Enter a Username:</label>
+            <input id="username" type="text" placeholder="username" name="username">
+        </p>
+        <label for="password">Enter a Password:</label>
+        <input type="password" placeholder="password" id="password" name="password">
+        <P>
+            <label for="color">Pick a Color:</label>
+            <input type="color" id="color" name="color">
+        </P>
+        <P>
+            <label for="number">Enter a Number:</label>
+            <input type="number" placeholder="enter a number" id="number" name="number" min="1" max="1000">
+        </P>
+        <!-- this button doesn't submit the form! -->
+        <button type="button">Do not submit the form</button>
+        <!-- this button submit the form! -->
+        <button>Submit</button>
+        <!-- so does this one! -->
+        <input type="submit" value="CLick me!">
+    </form>
+    <hr>
+    <!-- Outside of a form, no default behaviour -->
+    <button>Not Inside Form</button>
+    <h2>Hijacking Searches</h2>
+    <h3>Search Youtube</h3>
+    <form action="https://www.youtube.com/results">
+        <input type="text" name="search_query">
+        <button>Search Youtube</button>
+    </form>
+    <h3>Search Google</h3>
+    <form action="https://www.google.com/search">
+        <input type="text" name="q">
+        <button>Search Google</button>
+    </form>
+
+    <h2>More Input!</h2>
+    <form action="/anime_favorite">
+        <input type="checkbox" name="agree_love_anime" id="agree">
+        <label for="agree">I agree to love anime</label>
+        <p>
+            <label for="naruto">Naruto</label>
+            <input type="radio" name="anime" id="naruto" value="naruto">
+            <label for="bleach">Bleach</label>
+            <input type="radio" name="anime" id="bleach" value="bleach">
+            <label for="one_piece">One Piece</label>
+            <input type="radio" name="anime" id="one_piece" value="one_piece">
+        </p>
+        <p>
+            <label for="banime">Please select best anime</label>
+            <select name="banime" id="banime">
+                <option value="naruto">Naruto</option>
+                <option value="bleach">Bleach</option>
+                <option value="one_piece" selected>One Piece</option>
+            </select>
+        </p>
+        <p>
+            <label for="anime_meter">Amount you love anime</label>
+            <input type="range" name="anime_love_meter" id="anime_meter" min="1" max="10" value="7">
+        </p>
+
+        <p>
+            <label for="special_req">Any Special Request?</label>
+            <br>
+            <textarea id="special_req" rows="5" cols="40" name="special_req?"
+                placeholder="Type Something here"></textarea>
+        </p>
+        <button>Submit</button>
+    </form>
+
+    <h2>Validation Demo</h2>
+    <form action="/validation">
+        <label for="first">Enter First Name</label>
+        <input type="text" name="first" id="first" required>
+        <p>
+            <label for="username">Username</label>
+            <input type="text" name="username" id="username" minlength="5" maxlength="10" required>
+        </p>
+        <p>
+            <input type="email" required>
+        </p>
+        <button>Submit</button>
+    </form>
+
+</body>
+
+</html>
